@@ -1,0 +1,15 @@
+{
+    "name": "pxt-project-timeber",
+    "version": "0.0.1",
+    "description": "Base code for Data Logging",
+    "license": "MIT",
+    "dependencies": {
+        "core": "*"
+    },
+    "files": [
+        "README.md",
+        "logging_base.ts"
+    ],
+    "testFiles": [],
+    "public": true
+}
