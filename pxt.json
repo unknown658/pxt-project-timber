@@ -5,7 +5,7 @@
     "license": "MIT",
     "dependencies": {
         "core": "*",
-        "BME688": "github:unknown658/pxt-project-mega-sense#v0.0.6",
+        "BME688": "github:unknown658/pxt-project-mega-sense#v0.0.7",
         "EEPROM": "github:unknown658/pxt-project-memory#v0.0.3"
     },
     "files": [
