@@ -1,19 +1,3 @@
-//List of different temperature units
-enum TemperatureUnitList {
-    //% block="°C"
-    C,
-    //% block="°F"
-    F
-}
-
-//List of different pressure units
-enum PressureUnitList {
-    //% block="Pa"
-    Pa,
-    //% block="mBar"
-    mBar
-}
-
 /**
  * Data Logging Base Code
  */
@@ -206,17 +190,17 @@ namespace logging {
             storeTitles()
         }
 
-        logDate = readDate()
-        logTime = readTime()
-        logTemp = readTemperature(tUnit)
-        logPress = readPressure(pUnit)
+        logDate = kitronik_air_quality.readDate()
+        logTime = kitronik_air_quality.readTime()
+        logTemp = BME688.readTemperature(tUnit)
+        logPress = BME688.readPressure(pUnit)
         logHumid = BME688.humidityReading
         logIAQ = BME688.iaqScore
         logCO2 = BME688.eCO2Value
         logLight = input.lightLevel()
 
         if (incDate) {
-            dataEntry = dataEntry + readDate() + delimiter
+            dataEntry = dataEntry + logDate + delimiter
         }
         if (incTime) {
             dataEntry = dataEntry + logTime + delimiter
@@ -265,7 +249,7 @@ namespace logging {
             progress = Math.round((addr / 131072) * 100)
             EEPROM.writeByte(0xFF, addr)
         }
-        clear()
+        //clear()
         //show("Memory Erase Complete", 2, ShowAlign.Centre)
         //basic.pause(2500)
         //clear()
