@@ -4,7 +4,8 @@
     "description": "Base code for Data Logging",
     "license": "MIT",
     "dependencies": {
-        "core": "*"
+        "core": "*",
+        "EEPROM": "github:unknown658/pxt-project-memory#v0.0.3"
     },
     "files": [
         "README.md",
