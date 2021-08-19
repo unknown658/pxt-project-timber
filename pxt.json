@@ -1,6 +1,6 @@
 {
     "name": "pxt-project-timeber",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Base code for Data Logging",
     "license": "MIT",
     "dependencies": {
